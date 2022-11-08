@@ -1,0 +1,17 @@
+version: 2
+
+dbt_demo:
+    target: dev
+    outputs:
+        dev:
+          type: bigquery
+          method: oauth
+          project: pe2024 
+          dataset: customer_curated_zone
+          location:  us-central1
+        prod:
+          type: bigquery
+          method: oauth
+          project: pe2024
+          dataset: customer_curated_zone
+          location: us-central1

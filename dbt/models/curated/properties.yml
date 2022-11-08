@@ -1,0 +1,51 @@
+version: 2
+
+sources:
+  - name: customer_raw_zone
+    tables:
+        - name: customers_data
+          description: 'Customers Data'
+          columns:
+            - name: client_id
+            - name: ssn
+            - name: first_name
+            - name: last_name
+            - name: gender
+            - name: street
+            - name: city
+            - name: state
+            - name: zip
+            - name: latitude
+            - name: longitude
+            - name: city_pop
+            - name: job
+            - name: dob
+            - name: email
+            - name: phonenum
+            - name: profile
+            - name: dt            
+
+models:
+    - name: customers_data
+      description: "Curated data"
+      columns:
+        - name: client_id
+        - name: ssn
+        - name: first_name
+        - name: last_name
+        - name: gender
+        - name: street
+        - name: city
+        - name: state
+        - name: zip
+        - name: latitude
+        - name: longitude
+        - name: city_pop
+        - name: job
+        - name: dob
+        - name: email
+          tests:
+            - not_null
+        - name: phonenum
+        - name: profile
+        - name: dt 
